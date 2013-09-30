@@ -1,0 +1,451 @@
+/*------------------------------------------------------------------------------
+  CSS Reset
+------------------------------------------------------------------------------*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+html[xmlns] .clearfix {
+  display: block;
+}
+
+* html .clearfix {
+  height: 1%;
+}
+
+
+/*------------------------------------------------------------------------------
+  General
+------------------------------------------------------------------------------*/
+
+* {
+  -webkit-font-smoothing: antialiased;
+  color: inherit;
+  font: inherit;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100%;
+  /*optimise legibility for fonts on mobile, if possible*/
+  text-rendering: optimizeLegibility;
+}
+
+.noSelect {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  cursor: default;
+}
+
+.selectable {
+  user-select: auto;
+  -webkit-user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
+  cursor: auto;
+}
+
+
+/*------------------------------------------------------------------------------
+  Fonts
+------------------------------------------------------------------------------*/
+
+body {
+  font: 18px/1.5em "Open Sans", Verdana, Helvetica, Arial, sans-serif;
+  color: #333;
+}
+
+b, strong {
+  font-weight: bold;
+}
+
+i, em {
+  font-style: italic;
+}
+
+u, span.u {
+  text-decoration: underline;
+}
+
+a {
+  color: #33ccff;
+}
+
+a:hover {
+  color: #83E0FF;
+}
+
+p {
+  margin: 1.00em 0;
+}
+
+p:first-child {
+  margin-top: 0;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+
+/*------------------------------------------------------------------------------
+  Page Structure
+------------------------------------------------------------------------------*/
+
+section {
+  position: relative;
+  overflow: auto;
+  text-align: center;
+}
+
+section.blue {
+  color: white;
+
+  background: #0074b2; /* Old browsers */
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPHJhZGlhbEdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzUlIj4KICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMwMDc0YjIiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMmM1MzllIiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L3JhZGlhbEdyYWRpZW50PgogIDxyZWN0IHg9Ii01MCIgeT0iLTUwIiB3aWR0aD0iMTAxIiBoZWlnaHQ9IjEwMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-radial-gradient(center, ellipse cover,  #0074b2 0%, #2c539e 100%); /* FF3.6+ */
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#0074b2), color-stop(100%,#2c539e)); /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(center, ellipse cover,  #0074b2 0%,#2c539e 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(center, ellipse cover,  #0074b2 0%,#2c539e 100%); /* Opera 12+ */
+  background: -ms-radial-gradient(center, ellipse cover,  #0074b2 0%,#2c539e 100%); /* IE10+ */
+  background: radial-gradient(ellipse at center,  #0074b2 0%,#2c539e 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0074b2', endColorstr='#2c539e',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
+}
+
+section.cream {
+  background: #fcfff4; /* Old browsers */
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPHJhZGlhbEdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzUlIj4KICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNmY2ZmZjQiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZTllOWNlIiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L3JhZGlhbEdyYWRpZW50PgogIDxyZWN0IHg9Ii01MCIgeT0iLTUwIiB3aWR0aD0iMTAxIiBoZWlnaHQ9IjEwMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-radial-gradient(center, ellipse cover,  #fcfff4 0%, #e9e9ce 100%); /* FF3.6+ */
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#fcfff4), color-stop(100%,#e9e9ce)); /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(center, ellipse cover,  #fcfff4 0%,#e9e9ce 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(center, ellipse cover,  #fcfff4 0%,#e9e9ce 100%); /* Opera 12+ */
+  background: -ms-radial-gradient(center, ellipse cover,  #fcfff4 0%,#e9e9ce 100%); /* IE10+ */
+  background: radial-gradient(ellipse at center,  #fcfff4 0%,#e9e9ce 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#e9e9ce',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
+}
+
+section > .block {
+  position: absolute;
+  width: 21.00em;
+  top: 2.50em;
+  margin-left: -10.50em;
+  text-align: left;
+}
+
+section > .block.left {
+  left: 19%;
+}
+
+section > .block.middle {
+  left: 50%;
+}
+
+section > .block.right {
+  left: 81%;
+}
+
+section > .block > .inner {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+
+/*------------------------------------------------------------------------------
+  About Me
+------------------------------------------------------------------------------*/
+
+#secAboutMe {
+  height: 26.75em;
+}
+
+
+/*------------------------------------------------------------------------------
+  About Me > Intro
+------------------------------------------------------------------------------*/
+
+#blkIntro {
+
+}
+
+#blkIntro > .inner > .avatar {
+  margin: 0 auto;
+  margin-top: 2.00em;
+  width: 10.00em;
+  height: 10.00em;
+  border-radius: 50%;
+  border: 0.40em solid rgba(255, 255, 255, 0.20);
+}
+
+#blkIntro > .inner > .avatar > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+
+#blkIntro > .inner > .text {
+  margin: 0 auto;
+  margin-top: 2.00em;
+}
+
+#blkIntro > .inner > .text > .name {
+  font-size: 2.00em;
+  text-align: center;
+  white-space: nowrap;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+#blkIntro > .inner > .text > .buttons {
+  padding-top: 1.50em;
+  text-align: center;
+}
+
+#blkIntro > .inner > .text > .buttons > a {
+  display: inline-block;
+  width: 2.20em;
+  height: 2.20em;
+  text-align: center;
+  line-height: 2.20em;
+  margin: 0 0.40em;
+  border-radius: 1.10em;
+  background-color: rgba(255, 255, 255, 0.20);
+  text-decoration: none;
+  color: white;
+}
+
+#blkIntro > .inner > .text > .buttons > a:hover {
+  background-color: rgba(255, 255, 255, 0.30);
+}
+
+#blkIntro > .inner > .text > .buttons > a.blog {
+  width: 3.50em;
+}
+
+
+/*------------------------------------------------------------------------------
+  About Me > Description
+------------------------------------------------------------------------------*/
+
+#blkDescription {
+  height: 22.00em;
+  line-height: 22.00em;
+}
+
+#blkDescription > .inner {
+  position: static;
+  display: inline-block;
+  vertical-align: middle;
+  height: auto;
+  line-height: 1.50em;
+}
+
+
+/*------------------------------------------------------------------------------
+  About Me > Twitter
+------------------------------------------------------------------------------*/
+
+#blkTwitter {
+  border: 0.40em solid rgba(255, 255, 255, 0.3);
+  border-radius: 1.00em;
+  min-height: 21.00em;
+  overflow: hidden;
+}
+
+#blkTwitter > .loader {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  line-height: 21.00em;
+  text-align: center;
+}
+
+#blkTwitter > .loader > i {
+  vertical-align: middle;
+  color: white;
+}
+
+#blkTwitter > .inner {
+  margin: 0 1.00em;
+  margin-top: 0.25em;
+  margin-bottom: 0.75em;
+  width: auto;
+  visibility: hidden;
+}
+
+#blkTwitter > .inner > iframe {
+  display: block;
+  margin: 0 auto;
+}
+
+
+/*------------------------------------------------------------------------------
+  Blog
+------------------------------------------------------------------------------*/
+
+#secBlog {
+  height: 0.20em;
+}
+
+
+/*------------------------------------------------------------------------------
+  Projects
+------------------------------------------------------------------------------*/
+
+#secProjects {
+  height: 37.00em;
+}
+
+#secProjects .block {
+  border: 0.40em solid rgba(255, 255, 255, 0.30);
+  border-radius: 1.00em;
+}
+
+#secProjects .block > .inner {
+  margin: 1.00em;
+}
+
+#secProjects .block h1 {
+  font-weight: bold;
+}
+
+#secProjects .block h1 > span.founded {
+  color: rgba(255, 255, 255, 0.50);
+  /*margin-left: 1.00em;*/
+  float: right;
+}
+
+#secProjects .block img.logo {
+  display: block;
+  width: 75%;
+  margin: 0 auto;
+  margin-top: 1.00em;
+}
+
+#secProjects .block p.website {
+  text-align: center;
+  margin-bottom: 1.00em;
+}
+
+
+/*------------------------------------------------------------------------------
+  Media Query > Tablet
+------------------------------------------------------------------------------*/
+
+@media (max-width: 1265px) {
+
+  section {
+    height: auto !important;
+  }
+
+  section > .block {
+    position: static;
+    margin: 2.00em auto;
+  }
+
+  #blkDescription {
+    height: auto;
+    line-height: normal;
+  }
+
+  #blkTwitter {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 0;
+  }
+
+  #blkTwitter > .loader {
+    display: none;
+  }
+
+  #secBlog {
+    height: 10px !important;
+  }
+
+}
+
+
+/*------------------------------------------------------------------------------
+  Media Query > Phone
+------------------------------------------------------------------------------*/
+
+@media (max-width: 568px) {
+
+  section > .block {
+    width: 90%;
+  }
+
+  #blkTwitter {
+    display: none;
+    max-width: 21.00em;
+  }
+
+  #secProjects .block h1 > span.founded {
+    float: none;
+    display: block;
+  }
+
+}
