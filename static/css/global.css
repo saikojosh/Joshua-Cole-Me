@@ -443,6 +443,18 @@ section > .block > .inner {
     max-width: 21.00em;
   }
 
+  #secProjects .block {
+    border: none;
+  }
+
+  #secProjects .block > .inner {
+    margin: 0;
+  }
+
+  #secProjects .block h1 {
+    font-size: 1.10em;
+  }
+
   #secProjects .block h1 > span.founded {
     float: none;
     display: block;
