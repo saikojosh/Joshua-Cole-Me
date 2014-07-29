@@ -1,4 +1,4 @@
-PersonalSite
-============
+JoshuaCole.me
+=============
 
 My own personal website.
