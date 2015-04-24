@@ -15,7 +15,7 @@ html, body {
   margin: 0;
   padding: 0;
   color: black;
-  font: 18px/1.5em Verdana, Helvetica, Arial, sans-serif;
+  font: 14px/1.5em Verdana, Helvetica, Arial, sans-serif;
 
   /*optimise legibility for fonts on mobile, if possible*/
   text-rendering: optimizeLegibility;
@@ -26,6 +26,14 @@ body {
   position: relative;
   background: #f7f7f7;
   padding: 25px;
+}
+
+a {
+  color: black;
+}
+
+a:hover {
+  color: #484848;
 }
 
 .no-select {
@@ -58,6 +66,10 @@ body {
   font-family: 'Moon';
   font-weight: bold;
   src: url('../font/moon-bold.otf');
+}
+
+strong {
+  font-weight: bold;
 }
 
 
@@ -95,7 +107,7 @@ body {
   border-radius: 4px;
   box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.10);
   -webkit-backface-visibility: hidden;
-  -webkit-transform:translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
 }
 
 #main > .card > .front {
@@ -104,11 +116,11 @@ body {
 }
 
 #main > .card > .back {
-  -webkit-transform: rotatey(-180deg);
+  -webkit-transform: rotateY(-180deg);
 }
 
 #main > .card.flipped {
-  -webkit-transform: rotatey(-180deg);
+  -webkit-transform: rotateY(-180deg);
 }
 
 #main > .card > .face > .inner {
@@ -121,13 +133,14 @@ body {
   height: 40px;
   line-height: 40px;
   text-align: center;
-  color: rgba(0, 0, 0, 0.70);
+  color: #00A8FF;
+  font-size: 18px;
   border: 2px solid #f7f7f7;
   text-decoration: none;
 }
 
 #main > .card > .face > .inner .button:hover {
-  color: rgba(0, 0, 0, 0.90);
+  color: #00A8FF;
   background: #f7f7f7;
 }
 
@@ -175,7 +188,7 @@ body {
 #info > .inner > .sub-title {
   font-family: 'Moon';
   font-size: 18px;
-  margin-top: 10px;
+  margin-top: 12px;
   color: rgba(0, 0, 0, 0.70);
 }
 
@@ -228,18 +241,40 @@ body {
   height: 40px;
   line-height: 40px;
   margin-top: 20px;
+  font-family: "Moon";
   font-weight: bold;
   font-size: 20px;
 }
 
 #about > .inner > .text {
   position: absolute;
-  top: 60px;
+  top: 70px;
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: 20px;
   overflow-x: hidden;
   overflow-y: auto;
+  text-align: left;
+  padding: 0 20px;
+}
+
+#about > .inner > .text > p:first-child {
+  margin-top: 0;
+}
+
+#about > .inner > .text > p:last-child {
+  margin-bottom: 0;
+}
+
+#about > .inner > .text > p.quote {
+  margin-top: 30px;
+  color: #999;
+  font-style: italic;
+}
+
+#about > .inner > .text > p.quote > span.author {
+  color: #ccc;
+  text-align: right;
 }
 
 
