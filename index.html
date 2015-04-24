@@ -18,17 +18,32 @@
 <body class="no-select">
 
   <div id="main">
-    <div class="inner">
-      <div class="avatar"><div class="photo"></div></div>
-      <div class="name"><span class="selectable">Joshua Cole</span></div>
-      <div class="sub-title"><span class="selectable">Award-Winning Entrepreneur</span></div>
-      <div class="buttons">
-        <a href="mailto:hello@joshuacole.me?subject=Hi%20Josh"><i class="fa fa-envelope"></i></a>
-        <a href="http://uk.linkedin.com/in/joshcoleuk/" target="_blank"><i class="fa fa-linkedin"></i></a>
-        <a href="http://www.twitter.com/saikojosh" target="_blank"><i class="fa fa-twitter"></i></a>
-        <a href="/blog">Blog</a>
+
+    <div class="card">
+      <div id="info" class="face front">
+        <div class="inner">
+          <a href="JavaScript:void(0);" onclick="Global.showAbout();" class="button about-link"><i class="fa fa-info-circle"></i></a>
+          <div class="avatar"><div class="photo"></div></div>
+          <div class="name"><span class="selectable">Joshua Cole</span></div>
+          <div class="sub-title"><span class="selectable">Award-Winning Entrepreneur</span></div>
+          <div class="button-row">
+            <a href="mailto:hello@joshuacole.me?subject=Hi%20Josh" class="button"><i class="fa fa-envelope"></i></a>
+            <a href="http://uk.linkedin.com/in/joshcoleuk/" target="_blank" class="button"><i class="fa fa-linkedin"></i></a>
+            <a href="http://www.twitter.com/saikojosh" target="_blank" class="button"><i class="fa fa-twitter"></i></a>
+            <a href="/blog" class="button">Blog</a>
+          </div>
+        </div>
+      </div>
+
+      <div id="about" class="face back">
+        <div class="inner">
+         <a href="JavaScript:void(0);" onclick="Global.showInfo();" class="button info-link"><i class="fa fa-rotate-left"></i></a>
+         <div class="title">About Me</div>
+         <div class="text">xxx</div>
+        </div>
       </div>
     </div>
+
   </div>
 
 	<!-- Google Analytics -->

@@ -1,5 +1,6 @@
-if ( typeof DEBUG === 'undefined' ) DEBUG = true;
-
+/*
+ * JavaScript for the page.
+ */
 var Global = {
 
   /*
@@ -10,37 +11,34 @@ var Global = {
   },
 
   /*
-   * Sets up the class.
+   * Sets up the page.
    */
   setup: function () {
 
-    // Check until the iframe exists
-    setTimeout(function checkTwitter() {
-      if (typeof $('#blkTwitter iframe')[0] === 'undefined') {
-        setTimeout(checkTwitter, 10);
-      }
-      else {
-        setTimeout(Global.onTwitterLoad, 100);
-      }
-    }, 10);
-
+    // Cache selectors.
+    Global.prop.$mainCard = $('#main > .card');
 
   },
 
   /*
-   * Hides the loader and shows the twitter iframe.
+   * Flips the card to show the about side.
    */
-  onTwitterLoad: function () {
+  showAbout: function () {
+    Global.prop.$mainCard.addClass('flipped');
+  },
 
-    $('#blkTwitter .loader').css('display', 'none');
-    $('#blkTwitter .inner').css('visibility', 'visible');
-
+  /*
+   * Flips the card back to the info side.
+   */
+  showInfo: function () {
+    Global.prop.$mainCard.removeClass('flipped');
   }
 
 };
 
-
 /*
  * Called after DOM is loaded.
  */
-if (typeof jQuery !== 'undefined') $(document).ready(Global.setup.bind(Global));
+if (typeof jQuery !== 'undefined') {
+  $(document).ready(Global.setup.bind(Global));
+}
