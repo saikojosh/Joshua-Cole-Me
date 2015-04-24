@@ -1,5 +1,5 @@
 <?php
 
-  header('Location: http://uk.linkedin.com/in/joshcole1989/', true, 302);
+  header('Location: http://uk.linkedin.com/in/joshcoleuk/', true, 302);
 
 ?>
