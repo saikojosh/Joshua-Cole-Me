@@ -293,7 +293,7 @@ strong {
        (min-resolution: 1.5dppx)
 {
 
-  #main > .avatar > .photo {
+  #info > .inner > .avatar > .photo {
     background-image: url('../img/me@2x.jpg');
   }
 
