@@ -21,6 +21,9 @@ var Global = {
     Global.prop.$mainCard  = $('#main > .card');
     Global.prop.$aboutText = $('#about > .inner > .text');
 
+    // Prevent drag & drop of images and links.
+    $('img,a').on('dragstart', function () { return false; });
+
   },
 
   /*
