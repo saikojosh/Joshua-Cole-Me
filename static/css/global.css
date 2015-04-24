@@ -9,30 +9,26 @@
 }
 
 html, body {
+  box-sizing: border-box;
   width: 100%;
   height: 100%;
-  color: white;
-  font: 18px/1.5em "Open Sans", Verdana, Helvetica, Arial, sans-serif;
-  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: black;
+  font: 18px/1.5em Verdana, Helvetica, Arial, sans-serif;
+
   /*optimise legibility for fonts on mobile, if possible*/
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
 
 body {
-  background-image: url('../img/backgrounds/1.jpg');
-  background-size: cover;
-  background-position: center;
-}
-
-.pageWidth {
   position: relative;
-  min-width: 900px;
-  max-width: 1100px;
-  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.03);
+  padding: 25px;
 }
 
-.noSelect {
+.no-select {
   user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -53,360 +49,158 @@ body {
   Fonts
 ------------------------------------------------------------------------------*/
 
-b, strong {
+@font-face {
+  font-family: 'Moon';
+  src: url('../font/moon-regular.otf');
+}
+
+@font-face {
+  font-family: 'Moon';
   font-weight: bold;
-}
-
-i, em {
-  font-style: italic;
-}
-
-u, span.u {
-  text-decoration: underline;
-}
-
-a {
-  color: #33ccff;
-}
-
-a:hover {
-  color: #83E0FF;
-}
-
-p {
-  margin: 1.00em 0;
-}
-
-p:first-child {
-  margin-top: 0;
-}
-
-p:last-child {
-  margin-bottom: 0;
+  src: url('../font/moon-bold.otf');
 }
 
 
 /*------------------------------------------------------------------------------
-  Header
+  Main
 ------------------------------------------------------------------------------*/
 
-header {
-  height: 3.50rem;
-  line-height: 3.50rem;
-  background: rgba(255, 255, 255, 0.50);
+#main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  margin-left: -200px;
+  height: 400px;
+  margin-top: -200px;
+  text-align: center;
+  background: white;
+  border-radius: 3px;
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.10);
 }
 
-header > .pageWidth {
+#main > .inner {
+  position: relative;
+  width: 100%;
   height: 100%;
 }
 
-header > .pageWidth > .logo {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 1.00rem;
-}
-
-header > .pageWidth > .logo > .round {
+#main > .inner > .avatar {
   display: inline-block;
-  vertical-align: top;
-  margin-top: 0.25rem;
-  width: 3.00rem;
-  height: 3.00rem;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
-  border: 4px solid rgba(255, 255, 255, 0.50);
   overflow: hidden;
+  margin-top: 20px;
 }
 
-header > .pageWidth > .logo > .round > img {
-  display: block;
+#main > .inner > .avatar > .photo {
   width: 100%;
   height: 100%;
-}
-
-header > .pageWidth > .logo > .label {
-  display: inline-block;
-  vertical-align: top;
-  font-size: 1.50em;
-  margin-left: 0.50rem;
-}
-
-header > .pageWidth > nav {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 1.00rem;
-}
-
-header > .pageWidth > nav > a {
-  margin: 0.50rem;
-  text-decoration: none;
-  color: white;
-  font-size: 1.10rem;
-  opacity: 0.90;
-}
-
-header > .pageWidth > nav > a:last-child {
-  margin-right: 0;
-}
-
-header > .pageWidth > nav > a:hover {
-opacity: 1.00;
-}
-
-header > .pageWidth > nav > a.selected {
-  border-bottom: 4px solid rgba(255, 255, 255, 0.50);
-}
-
-
-
-/*------------------------------------------------------------------------------
-  About Me
-------------------------------------------------------------------------------*/
-
-#secAboutMe {
-  height: 26.75em;
-}
-
-
-/*------------------------------------------------------------------------------
-  About Me > Intro
-------------------------------------------------------------------------------*/
-
-#blkIntro {
-
-}
-
-#blkIntro > .inner > .avatar {
-  margin: 0 auto;
-  margin-top: 2.00em;
-  width: 10.00em;
-  height: 10.00em;
-  border-radius: 50%;
-  border: 0.40em solid rgba(255, 255, 255, 0.20);
-}
-
-#blkIntro > .inner > .avatar > img {
-  display: block;
-  width: 100%;
-  height: 100%;
+  box-shadow: inset 0 0 3px 1px rgba(0, 0, 0, 0.40);
   border-radius: inherit;
+  background-image: url('../img/me.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
-#blkIntro > .inner > .text {
-  margin: 0 auto;
-  margin-top: 2.00em;
+#main > .inner > .name {
+  font-family: 'Moon';
+  font-size: 40px;
+  margin-top: 30px;
+  color: rgba(0, 0, 0, 0.70);
 }
 
-#blkIntro > .inner > .text > .name {
-  font-size: 2.00em;
-  text-align: center;
-  white-space: nowrap;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+#main > .inner > .sub-title {
+  font-family: 'Moon';
+  font-size: 18px;
+  margin-top: 10px;
+  color: rgba(0, 0, 0, 0.70);
 }
 
-#blkIntro > .inner > .text > .buttons {
-  padding-top: 1.50em;
-  text-align: center;
-}
-
-#blkIntro > .inner > .text > .buttons > a {
-  display: inline-block;
-  width: 2.20em;
-  height: 2.20em;
-  text-align: center;
-  line-height: 2.20em;
-  margin: 0 0.40em;
-  border-radius: 1.10em;
-  background-color: rgba(255, 255, 255, 0.20);
-  text-decoration: none;
-  color: white;
-}
-
-#blkIntro > .inner > .text > .buttons > a:hover {
-  background-color: rgba(255, 255, 255, 0.30);
-}
-
-#blkIntro > .inner > .text > .buttons > a.blog {
-  width: 3.50em;
-}
-
-
-/*------------------------------------------------------------------------------
-  About Me > Description
-------------------------------------------------------------------------------*/
-
-#blkDescription {
-  height: 22.00em;
-  line-height: 22.00em;
-}
-
-#blkDescription > .inner {
-  position: static;
-  display: inline-block;
-  vertical-align: middle;
-  height: auto;
-  line-height: 1.50em;
-}
-
-
-/*------------------------------------------------------------------------------
-  About Me > Twitter
-------------------------------------------------------------------------------*/
-
-#blkTwitter {
-  border: 0.40em solid rgba(255, 255, 255, 0.3);
-  border-radius: 1.00em;
-  min-height: 21.00em;
-  overflow: hidden;
-}
-
-#blkTwitter > .loader {
+#main > .inner > .buttons {
+  display: table;
+  table-layout: fixed;
   position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
-  line-height: 21.00em;
-  text-align: center;
+  height: 40px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-top: 2px solid rgba(0, 0, 0, 0.03);
 }
 
-#blkTwitter > .loader > i {
+#main > .inner > .buttons > a {
+  display: table-cell;
   vertical-align: middle;
-  color: white;
+  color: rgba(0, 0, 0, 0.70);
+  border-right: 2px solid rgba(0, 0, 0, 0.03);
+  text-decoration: none;
 }
 
-#blkTwitter > .inner {
-  margin: 0 1.00em;
-  margin-top: 0.25em;
-  margin-bottom: 0.75em;
-  width: auto;
-  visibility: hidden;
+#main > .inner > .buttons > a:last-child {
+  border-right: 0;
 }
 
-#blkTwitter > .inner > iframe {
-  display: block;
-  margin: 0 auto;
-}
-
-
-/*------------------------------------------------------------------------------
-  Blog
-------------------------------------------------------------------------------*/
-
-#secBlog {
-  height: 0.20em;
+#main > .inner > .buttons > a:hover {
+  color: rgba(0, 0, 0, 0.90);
+  background: rgba(0, 0, 0, 0.03);
 }
 
 
 /*------------------------------------------------------------------------------
-  Projects
+  Media Query > Retina Images
 ------------------------------------------------------------------------------*/
 
-#secProjects {
-  height: 37.00em;
-}
+/*
+ *  1) Webkit
+ *  2) Other Browsers (dpi)
+ *  3) The Future (dppx)
+ */
+@media (-webkit-min-device-pixel-ratio: 1.5),
+       (min-resolution: 144dpi),
+       (min-resolution: 1.5dppx)
+{
 
-#secProjects .block {
-  border: 0.40em solid rgba(255, 255, 255, 0.30);
-  border-radius: 1.00em;
-}
-
-#secProjects .block > .inner {
-  margin: 1.00em;
-}
-
-#secProjects .block h1 {
-  font-weight: bold;
-}
-
-#secProjects .block h1 > span.founded {
-  color: rgba(255, 255, 255, 0.50);
-  /*margin-left: 1.00em;*/
-  float: right;
-}
-
-#secProjects .block img.logo {
-  display: block;
-  width: 75%;
-  margin: 0 auto;
-  margin-top: 1.00em;
-}
-
-#secProjects .block p.website {
-  text-align: center;
-  margin-bottom: 1.00em;
-}
-
-
-/*------------------------------------------------------------------------------
-  Media Query > Tablet
-------------------------------------------------------------------------------*/
-
-@media (max-width: 1265px) {
-
-  section {
-    height: auto !important;
+  #main > .avatar > .photo {
+    background-image: url('../img/me@2x.jpg');
   }
 
-  section > .block {
-    position: static;
-    margin: 2.00em auto;
-  }
+}
 
-  #blkDescription {
+
+/*------------------------------------------------------------------------------
+  Media Query > Short Height
+------------------------------------------------------------------------------*/
+
+@media (max-height: 450px) {
+
+  body {
     height: auto;
-    line-height: normal;
   }
 
-  #blkTwitter {
-    display: inline-block;
-    vertical-align: middle;
-    margin-top: 0;
-  }
-
-  #blkTwitter > .loader {
-    display: none;
-  }
-
-  #secBlog {
-    height: 10px !important;
+  #main {
+    position: static;
+    margin: 0 auto;
   }
 
 }
 
-
 /*------------------------------------------------------------------------------
-  Media Query > Phone
+  Media Query > Thin Width
 ------------------------------------------------------------------------------*/
 
-@media (max-width: 568px) {
+@media (max-width: 410px) {
 
-  section > .block {
-    width: 90%;
+  body {
+    height: auto;
+    padding: 10px;
   }
 
-  #blkTwitter {
-    display: none;
-    max-width: 21.00em;
-  }
-
-  #secProjects .block {
-    border: none;
-  }
-
-  #secProjects .block > .inner {
+  #main {
+    position: static;
+    width: 100%;
     margin: 0;
-  }
-
-  #secProjects .block h1 {
-    font-size: 1.10em;
-  }
-
-  #secProjects .block h1 > span.founded {
-    float: none;
-    display: block;
   }
 
 }
