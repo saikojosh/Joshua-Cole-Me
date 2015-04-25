@@ -358,6 +358,37 @@ strong {
 
 
 /*------------------------------------------------------------------------------
+  Media Query > Thin Width / Mobile Phone Vertical (small)
+------------------------------------------------------------------------------*/
+
+@media (max-width: 350px) {
+
+  html,
+  body {
+    font-size: 12px;
+  }
+
+  #main > .card > .face > .inner .button {
+    font-size: 15px;
+  }
+
+  #info > .inner > .name {
+    font-size: 34px;
+  }
+
+  #info > .inner > .sub-title {
+    font-size: 15px;
+  }
+
+  #about > .inner > .title {
+    font-size: 17px;
+  }
+
+}
+
+
+
+/*------------------------------------------------------------------------------
   Media Query > Short Height
 ------------------------------------------------------------------------------*/
 
