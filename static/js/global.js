@@ -8,7 +8,10 @@ var Global = {
    */
   prop: {
     $mainCard:            null,
+    $infoSide:            null,
+    $aboutSide:           null,
     $aboutText:           null,
+    transformsSupported:  false,
     aboutTextScrollFixed: false
   },
 
@@ -19,10 +22,24 @@ var Global = {
 
     // Cache selectors.
     Global.prop.$mainCard  = $('#main > .card');
-    Global.prop.$aboutText = $('#about > .inner > .text');
+    Global.prop.$infoSide  = $('#info');
+    Global.prop.$aboutSide = $('#about');
+    Global.prop.$aboutText = Global.prop.$aboutSide.find('.inner > .text');
 
     // Prevent drag & drop of images and links.
     $('img,a').on('dragstart', function () { return false; });
+
+    // Fix the UI if CSS transforms aren't supported.
+    Global.prop.transformsSupported = Global.isCSSTransformSupported();
+    if (!Global.prop.transformsSupported) {
+
+      // Allow the about text to scroll.
+      Global.prop.$aboutText.css('overflow-y', 'auto');
+
+      // Hide the flip button on the about side.
+      Global.prop.$aboutSide.find('.inner > .button.info-link').css('visibility', 'hidden');
+
+    }
 
   },
 
@@ -49,6 +66,26 @@ var Global = {
    */
   showInfo: function () {
     Global.prop.$mainCard.removeClass('flipped');
+  },
+
+  /*
+   * Returns the property prefix if CSS transforms are supported, otherwise it
+   * returns false.
+   */
+  isCSSTransformSupported: function () {
+
+    var prefixes = ['transform', 'WebkitTransform', 'MozTransform', 'OTransform', 'msTransform'];
+    var div      = document.createElement('div');
+
+    // Test each prefix starting with the standardised one 'transform'.
+    for (var i = 0, ilen = prefixes.length ; i < ilen ; i++) {
+      if (div && typeof div.style[prefixes[i]] !== 'undefined') {
+        return prefixes[i];
+      }
+    }
+
+    return false;
+
   }
 
 };
