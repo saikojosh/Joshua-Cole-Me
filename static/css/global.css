@@ -311,6 +311,7 @@ strong {
 #about > .inner > .text > p.quote > span.author {
   color: #ccc;
   text-align: right;
+  white-space: nowrap;
 }
 
 
