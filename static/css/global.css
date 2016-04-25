@@ -188,10 +188,14 @@ strong {
   position: absolute;
   top: 0;
   right: 0;
-  width: 50px;
   border-top: 0 !important;
   border-right: 0 !important;
   border-bottom-left-radius: 4px;
+  padding: 0 15px;
+}
+
+#info > .inner > .about-link.button > i {
+
 }
 
 #info > .inner > .avatar {
@@ -262,10 +266,10 @@ strong {
   z-index: 2;
   top: 0;
   left: 0;
-  width: 50px;
   border-top: 0 !important;
   border-left: 0 !important;
   border-bottom-right-radius: 4px;
+  padding: 0 15px;
 }
 
 #about > .inner > .title {
