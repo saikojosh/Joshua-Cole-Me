@@ -7,11 +7,11 @@ var Global = {
    * Global properties.
    */
   prop: {
-    $mainCard:            null,
-    $infoSide:            null,
-    $aboutSide:           null,
-    $aboutText:           null,
-    transformsSupported:  false,
+    $mainCard: null,
+    $infoSide: null,
+    $aboutSide: null,
+    $aboutText: null,
+    transformsSupported: false,
     aboutTextScrollFixed: false
   },
 
@@ -21,15 +21,15 @@ var Global = {
   setup: function () {
 
     // Cache selectors.
-    Global.prop.$mainCard  = $('#main > .card');
-    Global.prop.$infoSide  = $('#info');
+    Global.prop.$mainCard = $('#main > .card');
+    Global.prop.$infoSide = $('#info');
     Global.prop.$aboutSide = $('#about');
     Global.prop.$aboutText = Global.prop.$aboutSide.find('.inner > .text');
 
     // Prevent drag & drop of images and links.
     $('img,a').on('dragstart', function () { return false; });
 
-    // Fix the UI if CSS transforms aren't supported.
+    // Fix the UI if CSS3 transforms aren't supported.
     Global.prop.transformsSupported = Global.isCSSTransformSupported();
     if (!Global.prop.transformsSupported) {
 
@@ -75,7 +75,7 @@ var Global = {
   isCSSTransformSupported: function () {
 
     var prefixes = ['transform', 'WebkitTransform', 'MozTransform', 'OTransform', 'msTransform'];
-    var div      = document.createElement('div');
+    var div = document.createElement('div');
 
     // Test each prefix starting with the standardised one 'transform'.
     for (var i = 0, ilen = prefixes.length ; i < ilen ; i++) {
