@@ -322,6 +322,13 @@ strong {
   white-space: nowrap;
 }
 
+#about > .inner > .text > p.sign-off {
+  text-align: center;
+  margin-top: 7.00rem;
+  margin-bottom: 2.00rem;
+  font-size: 1.50em;
+}
+
 
 /*------------------------------------------------------------------------------
   Media Query > Retina Images
