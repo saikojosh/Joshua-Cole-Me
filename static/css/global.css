@@ -24,7 +24,11 @@ html, body {
 
 body {
   position: relative;
-  background: #f7f7f7;
+  background: #00306B;
+  background-image: url('../img/background-60.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   padding: 25px;
 }
 
