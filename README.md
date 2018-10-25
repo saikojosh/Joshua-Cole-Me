@@ -1,4 +1,2 @@
-JoshuaCole.me
-=============
-
+# JoshuaCole.me
 My own personal website.
