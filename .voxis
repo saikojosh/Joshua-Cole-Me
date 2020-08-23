@@ -1,0 +1,10 @@
+kind: service
+schema: 1
+
+lifecycle: static
+
+build:
+  ignore:
+    - .gitignore
+    - README.md
+  outputDir: ./
