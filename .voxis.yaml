@@ -7,3 +7,10 @@ build:
   ignore:
     - README.md
   outputDir: ./
+
+deploy:
+  prod:
+    ref: branch/master
+    domains:
+      - joshuacole.me
+      - www.joshuacole.me
