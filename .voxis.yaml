@@ -2,6 +2,7 @@ kind: service
 schema: 1
 
 lifecycle: static
+version: 2.0.0
 
 build:
   ignore:
